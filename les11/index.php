@@ -3,6 +3,9 @@
 	<head>
 		<title>Users</title>
 		<link rel="stylesheet" href="styles.css">
+		<script src="main.js"></script>
+		<script src="jquery-3.2.1.min.js"></script>
+		<meta charset="utf-8">
 	</head>
 	<body>
 		<?php
@@ -14,19 +17,29 @@ $pdo=createPDO(); //обьект для подключения к базе да�
 $db=$pdo->prepare('SELECT*FROM users');
 $db->execute();
 $users=$db->fetchAll();
-var_dump($users);
+foreach ($users as $user) {
+	$man=new User();
+	$man->id=$user["ID"];
+	$man->Name=$user["Name"];
+	$man->Login=$user["Login"];
+	$man->Password=$user["Password"];
+	$man->Bdate=$user["Bdate"];
+	$man->Phone=$user["Phone"];
+	$man->Sex=$user["Sex"];
+	$man->draw();
+}
 
 
 
-			$fakeuser=new User();
-			$fakeuser-> id=1;
-			$fakeuser-> Name="Tirion";
-			$fakeuser-> Login="Lanister111";
-			$fakeuser-> Password="5252";
-			$fakeuser-> Bdate="01.01.01";
-			$fakeuser-> Phone="+985124587965";
-			$fakeuser-> Sex=1;
-			$fakeuser->draw(); //функция для вывода пользователя на экран
+			//$fakeuser=new User();
+			//$fakeuser-> id=1;
+			//$fakeuser-> Name="Tirion";
+			//$fakeuser-> Login="Lanister111";
+			//$fakeuser-> Password="5252";
+			//$fakeuser-> Bdate="01.01.01";
+			//$fakeuser-> Phone="+985124587965";
+			//$fakeuser-> Sex=1;
+			//$fakeuser->draw(); //функция для вывода пользователя на экран
 			?>
 	</body>
 </html>

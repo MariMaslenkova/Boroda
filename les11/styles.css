@@ -5,7 +5,9 @@ body {
 .user-container {     
 	display: table;
     border-width: 4px; /* Толщина линии внизу */
-    /*border-style: dotted
+    border-style: dotted
+    border-color: black;
+    border: 1px solid grey;
 ; /* Стиль линии внизу */
     border-color: MediumSlateBlue; /* Цвет линии внизу */ 
    background: white;

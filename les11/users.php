@@ -16,7 +16,11 @@ public function draw(){
     echo '<div class = "Bdate">'.$this->Bdate."</div>";
     echo '<div class = "Phone">'.$this->Phone."</div>";
     echo '<div class = "Sex">'.$this->Sex."</div>";
+    echo '<button onclick = "remove_user('.$this->id.')">В АД!!!</button>';
     echo "</div>";
 }
 }
+
+
+
 ?>
