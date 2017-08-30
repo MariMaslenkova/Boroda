@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Страница регистрации</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	</head>
+<body>
+	<input type="email" placeholder="Email" maxlength="36" id="email">
+	<br>
+	<input type="date" placeholder="Date" id="date">
+	<br>
+	<select id="city">
+		<option value="0" disabled selected>Выберите Ваш город</option>
+		<option value="1">Могилев</option>
+		<option value="2">Минск</option>
+		<option value="3">Витебск</option>
+		<option value="4">Гомель</option>
+		<option value="5">Брест</option>
+		<option value="6">Гродно</option>
+
+	</select>
+	<br>
+	<input type="password" placeholder="Ввести пароль" maxlength="36" id="password">
+	<br>
+	<input type="password" placeholder="Повторить пароль" maxlength="36" id="password1">
+	<button class="col" onclick="signUp()">Зарегистрироваться</button>
+
+</body>
+</html>
